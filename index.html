@@ -5,10 +5,10 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Calculator</title>
-  <meta name="description" content="Simple Calculator With Dark Mode." />
+  <meta name="description" content="Calculator" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/x-icon" href="assets/calculator.ico">
-  <link rel="stylesheet" href="styles/dark.css" id="theme" />
+  <link rel="stylesheet" href="dark.css" id="theme" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
@@ -20,11 +20,6 @@
       <div class="header-container">
         <!-- This heading also notifies about the theme change.-->
         <h1 id="toast">Calculator</h1>
-        <div class="top-buttons">
-          <button type="button" onclick="changeTheme()" class="theme-button">
-            <img src="assets/SunIcon.svg" alt="Theme Icon" height="19" width="19" id="theme-icon">
-          </button>
-        </div>
       </div>
       <div class="first-row">
         <input type="text" name="result" id="result" placeholder="Result" readonly />
@@ -56,7 +51,7 @@
       </div>
     </div>
   </div>
-  <script src="scripts/script.js">
+  <script src="script.js">
   </script>
 </body>
 </html>
