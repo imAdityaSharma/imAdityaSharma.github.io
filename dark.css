@@ -24,5 +24,20 @@
     font-weight: bold;
 }
   
-
-  
+body{
+  animation: flipBackground 10s infinite alternate;
+}
+@keyframes flipBackground {
+  0% {
+    background-image: url("cat1.jpg");
+    background-size: cover;
+  }
+  50% {
+    background-image: url("cat2.jpg");
+    background-size: cover;
+  }
+  100% {
+    background-image: url("cat1.jpg");
+    background-size: cover;
+  }
+}
