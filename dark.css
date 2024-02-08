@@ -1,4 +1,4 @@
-
+/* CSS Reset & Global Styles */
 .box1 {
   color: #ffffff; /* Text color */
   width: 300px;
@@ -9,23 +9,20 @@
   transform: translate(-50%, -50%);
   padding: 20px;
   line-height: 30px;
-  text-decoration-color: #ffffff;
   text-align: center; /* Center-align text */
   font-size: 30px; /* Set text size to 30 pixels */
   font-weight: bold; /* Make text bold */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.box1 a {
-  color: red; /* Set hyperlink color to red */
-  text-decoration: none;
+.box1 a{
+    color: red; /* Set hyperlink color to red */
+    text-decoration: none; 
+    text-align: center; 
+    font-size: 30px; 
+    font-weight: bold;
 }
+  
 
-/* CSS Reset & Global Styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+  

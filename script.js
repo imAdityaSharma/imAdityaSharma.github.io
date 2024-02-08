@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function changeBackgroundImage() {
     // Change the background image
     document.body.style.backgroundImage = "url('" + images[index] + "')";
+    document.body.style.backgroundSize="cover"
 
     // Increment index to switch to the next image
     index = (index + 1) % images.length;
