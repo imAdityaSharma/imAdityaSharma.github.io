@@ -218,7 +218,7 @@ body.dark-mode .project-item {
 
 /* Contact Button */
 .contact-button {
-    display: inline-block;
+    display: inline-block, flex;
     background: #333;
     color: #fff;
     padding-top: 10px;
