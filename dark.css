@@ -27,7 +27,7 @@
 body{
   animation: flipBackground 10s infinite alternate;
 }
-@keyframes flipBackground {
+/* @keyframes flipBackground {
   0% {
     background-image: url("cat1.jpg");
     background-size: cover;
@@ -40,4 +40,4 @@ body{
     background-image: url("cat1.jpg");
     background-size: cover;
   }
-}
+} */
