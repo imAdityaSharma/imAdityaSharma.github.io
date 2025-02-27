@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aditya Sharma - Portfolio</title>
+    
     <link rel="canonical" href="https://imAdityaSharma.github.io" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,160 +15,390 @@
      <meta name="google-site-verification" content="sPG7XAvvlWTetQWJN4WgwhayeXj8b6rmd3Qfef0D7UI" />
      <meta name="google-adsense-account" content="ca-pub-9577733523183566">
      <!-- <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script> -->
+    <meta name="theme-color" content="#2196F3">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="background.js" defer></script>
 </head>
 
 <body>
+    <canvas id="bg-canvas"></canvas>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">
-         <i class="fas fa-moon"></i><!-- Icon for dark mode -->
+         <i class="fas fa-moon"></i>
     </button>
-    <div id="intro" class="intro">
+
+    <!-- Landing Page -->
+    <section id="intro" class="intro">
         <div class="intro-container">
-            <div class="intro-profile">
-                <img src="dp.jpg" alt="Aditya Sharma">
-            </div>
-            <div class="intro-text">
+            <div class="intro-content">
+                <div class="intro-profile">
+                    <img src="dp.jpg" alt="Aditya Sharma">
+                </div>
                 <h1>Aditya Sharma</h1>
-                <p>Aspiring ML Engineer specializing in Natural Language Processing. With a B.Tech in IT and experience in building scalable software solutions, I'm passionate about applying NLP to solve real-world challenges.</p>
-                <a href="#header" >
-                <img width="50" class="intro-button" height="50" src="https://img.icons8.com/ios/50/circled-chevron-right--v1.png" alt="circled-chevron-right--v1"/>
+                <a href="#main-content" class="scroll-button">
+                    <i class="fas fa-chevron-right"></i>
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <header id="header">
-        <div class="container">
-            <h1>Aditya Sharma</h1>
-            <p>Aspiring ML Engineer | Focused on NLP</p>
-          </div>
-        </header>
+    <!-- Main Content Container -->
+    <div id="main-content" class="main-content">
+        <!-- Header Section -->
+        <section id="header" class="header">
+            <div class="container">
+                <h1>Aditya Sharma</h1>
+                <p class="typing-text">Aspiring ML Engineer | Focused on NLP</p>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>I'm a Machine Learning Engineer with expertise in AI/ML solutions and data engineering. Currently working on healthcare AI solutions and GenAI applications, with a strong background in cloud technologies and data processing.</p>
+            </div>
+        </section>
         
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>Technical Skills</h2>
+                <div class="skills-categories">
+                    <div class="skill-category">
+                        <h3>Programming & Scripting</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fab fa-python"></i>
+                                <h4>Python</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-terminal"></i>
+                                <h4>Bash</h4>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Frameworks & Libraries</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fas fa-fire"></i>
+                                <h4>PySpark</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-server"></i>
+                                <h4>Flask</h4>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-brain"></i>
+                                <h4>Scikit-learn</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-cube"></i>
+                                <h4>NumPy</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-table"></i>
+                                <h4>Pandas</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Data Visualization</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fas fa-chart-bar"></i>
+                                <h4>Power BI</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Matplotlib</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-chart-area"></i>
+                                <h4>Seaborn</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Machine Learning</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fas fa-robot"></i>
+                                <h4>Supervised Learning</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-chart-pie"></i>
+                                <h4>Statistical Modeling</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-tools"></i>
+                                <h4>Feature Engineering</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>Model Evaluation</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-sliders-h"></i>
+                                <h4>Hyperparameter Tuning</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-language"></i>
+                                <h4>NLP</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Cloud & Databases</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fab fa-microsoft"></i>
+                                <h4>Azure Data Lake</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-industry"></i>
+                                <h4>Azure Data Factory</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-bolt"></i>
+                                <h4>Azure DataBricks</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-database"></i>
+                                <h4>PostgreSQL</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>DevOps & Version Control</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fab fa-docker"></i>
+                                <h4>Docker</h4>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-git-alt"></i>
+                                <h4>Git</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-github"></i>
+                                <h4>GitHub</h4>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Project-Based Professional</h3>
+                                <span class="date">Oct 2024 - Present</span>
+                            </div>
+                            <h4>MAXRay - AI agent for XRay Image Recognition</h4>
+                            <ul class="timeline-details">
+                                <li>Conducting R&D for ISO13485, ISO26262 compliant healthcare solution</li>
+                                <li>Designing scalable cloud infrastructure</li>
+                                <li>Developing proprietary AI agent for image recognition</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Project-Based Professional</h3>
+                                <span class="date">Feb 2024 - July 2024</span>
+                            </div>
+                            <h4>GenAI based Translation and Summarization Tool</h4>
+                            <ul class="timeline-details">
+                                <li>Developed LangChain-based RAG Application with Fine-tuned LLaMA3.1 Model</li>
+                                <li>Integrated LLM model into LangChain for advanced NLP tasks</li>
+                                <li>Optimized application for local deployment</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Associate Engineer, ATCS - A Nagarro Company</h3>
+                                <span class="date">July 2022 - Oct 2023</span>
+                            </div>
+                            <ul class="timeline-details">
+                                <li>Developed & optimized ETL pipelines using Azure Data Factory, PySpark, and PostgreSQL</li>
+                                <li>Worked on Azure Synapse & DataBricks for data transformation and analysis</li>
+                                <li>Implemented secure, privacy-compliant APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Data Science Intern, ATCS - A Nagarro Company</h3>
+                                <span class="date">Jan 2022 - July 2022</span>
+                            </div>
+                            <ul class="timeline-details">
+                                <li>Contributed to data engineering projects for pricing strategy optimization</li>
+                                <li>Created data marts through source integration</li>
+                                <li>Performed statistical analysis on large datasets</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-    <section id="about" class="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>I’m Aditya Sharma, an aspiring ML Engineer with a strong focus on Natural Language Processing (NLP). I hold a B.Tech in Information Technology and have experience in developing scalable software solutions and implementing machine learning models to solve complex business problems. My current passion lies in NLP and its applications in real-world scenarios.</p>
-      </div>
-    </section>
-    
-    <section id="skills" class="skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill">
-            <h3>Programming & Scripting</h3>
-            <p>Python, C/C++, bash, SQL, JavaScript</p>
-          </div>
-          <div class="skill">
-                    <h3>Frameworks & Libraries</h3>
-                    <p>TensorFlow, PyTorch, Flask, Django, scikit-learn, Pandas, NumPy, Selenium, OpenCV</p>
-                  </div>
-                <div class="skill">
-                  <h3>Databases</h3>
-                    <p>SQL (PostgreSQL, MySQL), NoSQL (MongoDB, Redis), Data Warehousing (Redshift, Azure Synapse)</p>
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>GST Analytics</h3>
+                            <p>ML model using XGBoost and Deep Reinforcement Learning for Imbalanced Classification</p>
+                            <div class="project-tech">
+                                <span>XGBoost</span>
+                                <span>Deep RL</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Quora Duplicate Question Detection</h3>
+                            <p>Developed and trained an NLP model achieving 75% accuracy using Random Forest classifier. Implemented with FastAPI backend and deployed using Docker and Kubernetes. Enhanced performance through text preprocessing, feature extraction, and hyperparameter tuning.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>NLP</span>
+                                <span>Docker</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill">
-                    <h3>Cloud Technologies</h3>
-                    <p>Microsoft Azure, Amazon Web Services, Google Cloud</p>
-                  </div>
-                  <div class="skill">
-                    <h3>Data Visualization</h3>
-                    <p>Power BI, Tableau, Matplotlib, Seaborn</p>
-                  </div>
-                  <div class="skill">
-                    <h3>Machine Learning</h3>
-                    <p>Supervised Learning, NLP, Deep Learning, Computer Vision</p>
-                  </div>
-                  <div class="skill">
-                    <h3>Web Development</h3>
-                    <p>HTML, CSS, JavaScript</p>
-                  </div>
-                <div class="skill">
-                  <h3>Operating Systems</h3>
-                  <p>Linux</p>
+            </div>
+        </section>
+        
+        <section id="education" class="education">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>B.Tech, Information Technology</h3>
+                    <span class="date">2018-2022</span>
+                    <p>Swami Keshwanand Institute of Technology, Management and Gramothan, Jaipur, Rajasthan</p>
                 </div>
-                <div class="skill">
-                  <h3>Software & Tools</h3>
-                    <p>Docker, Kubernetes, Git, GitHub, CI/CD</p>
-                  </div>
+            </div>
+        </section>
+
+        <section id="github-stats" class="github-stats">
+            <div class="container">
+                <h2>GitHub Activity</h2>
+                <div class="stats-container">
+                    <!-- GitHub Stats Card -->
+                    <div class="github-card">
+                        <img src="https://github-readme-stats.vercel.app/api?username=imAdityaSharma&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats">
+                    </div>
+                    
+                    <!-- Most Used Languages -->
+                    <div class="github-card">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=imAdityaSharma&layout=compact&theme=tokyonight&hide_border=true" alt="Most Used Languages">
+                    </div>
+                    
+                    <!-- GitHub Streak Stats -->
+                    <div class="github-card">
+                        <img src="https://github-readme-streak-stats.herokuapp.com/?user=imAdityaSharma&theme=tokyonight&hide_border=true" alt="GitHub Streak">
+                    </div>
                 </div>
-        </div>
-    </section>
-    
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-item">
-              <h3>Associate Engineer, ATCS - A Nagarro Company</h3>
-                <span>July 2022 - Oct 2023, Jaipur, India</span>
-                <!-- <p>work info </p> -->
-              </div>
-              <div class="experience-item">
-                <h3>Data Science Intern, ATCS - A Nagarro Company</h3>
-                <span>Jan 2022 - July 2022, Jaipur, India</span>
-                <!-- <p>work info </p> -->
-              </div>
+                
+                <!-- Snake Animation -->
+                <div class="snake-container">
+                    <img src="https://raw.githubusercontent.com/imAdityaSharma/imAdityaSharma/output/github-contribution-grid-snake-dark.svg" alt="Snake animation">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+              <h2>Contact</h2>
+              <p>Reach out to me</p><br>
+              <a href="mailto:adityambha@outlook.com" class="contact-button">Outlook Email</a>
+              <a href="https://www.linkedin.com/in/imadityasharma/"  class="contact-button" target="_blank">LinkedIn</a>
+              <a href="https://github.com/imAdityaSharma"  class="contact-button" target="_blank">GitHub</a>
+              <a href="assets/RESUME__Adi.pdf" class="contact-button" download="Resume_Aditya_Sharma.pdf">
+                My Resume
+              </a>
             </div>
           </section>
           
-          <section id="projects" class="projects">
+          <footer>
             <div class="container">
-              <h2>Projects</h2>
-              <div class="project-item">
-                <h3>PyCrawler</h3>
-                <p>Developed a robust Python-based web crawler leveraging requests, BeautifulSoup, NLTK, asyncio, and sqlite3 to efficiently index web pages. Ensured scalability and reliability through comprehensive testing and performance tuning.</p>
-                <a href="https://github.com/imAdityaSharma/pyCrawler" target="_blank">View on GitHub</a>
-              </div>
-              <div class="project-item">
-                <h3>Quora Duplicate Question Detection</h3>
-                <p>Developed and trained an NLP model to detect duplicate questions with 75% accuracy using a Random Forest classifier. Utilized text preprocessing, feature extraction, and hyperparameter tuning to enhance performance.</p>
-                <a href="https://github.com/imAdityaSharma/Quora-Duplicate-Questions-kaggle-" target="_blank">View on GitHub</a>
-              </div>
             </div>
-    </section>
-    
-    <section id="github-stats" class="github-stats">
-      <div class="container">
-            <h2>GitHub Stats</h2>
-            <img src="https://github-readme-stats.vercel.app/api?username=imAdityaSharma&show_icons=true&theme=radical" alt="GitHub Stats">
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=imAdityaSharma&layout=compact&theme=radical" alt="Top Languages">
-        </div>
-      </section>
+          </footer>
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9577733523183566"
+         crossorigin="anonymous"></script>
+    <!-- b1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9577733523183566"
+         data-ad-slot="3234818485"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
-      <section id="contact" class="contact">
-        <div class="container">
-          <h2>Contact</h2>
-          <p>Reach out to me</p><br>
-          <a href="mailto:adityambha@outlook.com" class="contact-button">Outlook Email</a>
-            <a href="https://www.linkedin.com/in/imadityasharma/"  class="contact-button" target="_blank">LinkedIn</a>
-            <a href="https://github.com/imAdityaSharma"  class="contact-button" target="_blank">GitHub</a>
-            <a href="assets/RESUME__Adi.pdf" class="contact-button" download="Resume_Aditya_Sharma.pdf">
-              My Resume <!--  <img width="30" height="20" src="https://img.icons8.com/ios-glyphs/30/download--v1.png" alt="Download Resume"/> -->
-            </a>
-        </div>
-      </section>
-      
-      <footer>
-        <div class="container">
-          <p>&copy; 2024 Aditya Sharma. All rights reserved.</p>
-        </div>
-      </footer>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9577733523183566"
-     crossorigin="anonymous"></script>
-<!-- b1 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9577733523183566"
-     data-ad-slot="3234818485"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+          <script src="animation.js"></script>
+    </div>
+</body>
 
-      <script src="animation.js"></script>
-    </body>
-    
-    </html>
+</html>
     
