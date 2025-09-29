@@ -147,7 +147,7 @@
             
             /* Custom gradients */
             --gradient-primary: linear-gradient(120deg, var(--md-primary), var(--md-tertiary));
-            --gradient-surface: linear-gradient(to bottom right, rgba(253, 252, 255, 0.05), rgba(218, 228, 235, 0.08));
+            --gradient-surface: linear-gradient(to bottom right, rgba(253, 252, 255, 0.01), rgba(218, 228, 235, 0.02));
             
             /* Light Mode Colors */
             --md-on-surface: #1a1a1a; /* Text color on surface */
@@ -180,14 +180,13 @@
         
         /* Modern sections with Material Design */
         section {
-            background: var(--gradient-surface);
-            backdrop-filter: blur(10px);
-            margin: 0 0 80px 0;
+            background: transparent;
+            margin: 80px 0;
             padding: 140px 40px 60px 40px;
             position: relative;
             overflow: hidden;
             border-radius: 28px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
                         0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
@@ -237,7 +236,8 @@
         #contact {
             position: relative;
             z-index: 20;
-            background: var(--md-surface);
+            background: transparent;
+            backdrop-filter: blur(4px);
         }
         
         #header {
@@ -260,11 +260,11 @@
             flex-direction: column;
             align-items: center;
             gap: 30px;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(2px);
             padding: 40px;
             border-radius: 28px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .intro-profile img {
@@ -358,17 +358,19 @@
         }
         
         .skill-card {
-            background: var(--gradient-surface);
+            background: transparent;
+            backdrop-filter: blur(2px);
             border-radius: 16px;
             padding: 1.5rem;
             text-align: center;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .skill-card:hover {
+            backdrop-filter: blur(8px);
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 100, 149, 0.5);
         }
         
         .skill-card i {
@@ -542,8 +544,8 @@
             /* Update gradient for dark mode */
             --gradient-primary: linear-gradient(120deg, var(--md-primary-container), var(--md-tertiary-container));
             --gradient-surface: linear-gradient(to bottom right,
-                rgba(30, 32, 34, 0.95),
-                rgba(41, 42, 45, 0.95));
+                rgba(30, 32, 34, 0.05),
+                rgba(41, 42, 45, 0.08));
 
             background: var(--md-surface);
             color: var(--md-on-surface);
@@ -559,38 +561,36 @@
         
         /* Dark mode specific adjustments */
         body.dark-mode .intro-content {
-            background: rgba(30, 32, 34, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            background: rgba(30, 32, 34, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(2px);
         }
         
-        body.dark-mode .skill {
-            background: var(--md-surface-container-low);
-            border: 1px solid var(--md-surface-container-highest);
+        body.dark-mode .skill-card {
+            background: rgba(30, 32, 34, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.02);
         }
-        
-        body.dark-mode .skill:hover {
-            background: var(--md-surface-container-high);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+        body.dark-mode .skill-card:hover {
+            background: rgba(30, 32, 34, 0.08);
         }
         
         body.dark-mode .project-item {
-            background: var(--md-surface-container-low);
-            border: 1px solid var(--md-surface-container-highest);
+            background: rgba(30, 32, 34, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.02);
         }
-        
+
         body.dark-mode .project-item:hover {
-            background: var(--md-surface-container-high);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            background: rgba(30, 32, 34, 0.08);
         }
         
         body.dark-mode .experience-item {
-            background: var(--md-surface-container-low);
-            border: 1px solid var(--md-surface-container-highest);
+            background: rgba(30, 32, 34, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.02);
         }
-        
+
         body.dark-mode .experience-item:hover {
-            background: var(--md-surface-container-high);
+            background: rgba(30, 32, 34, 0.08);
         }
         
         body.dark-mode .contact-button {
@@ -800,13 +800,17 @@
         .experience-item {
             margin-bottom: 40px;
             padding: 30px;
-            background: var(--gradient-surface);
+            background: transparent;
+            backdrop-filter: blur(2px);
             border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
             transition: transform 0.3s ease;
         }
         
         .experience-item:hover {
+            backdrop-filter: blur(4px);
             transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 100, 149, 0.5);
         }
         
         .experience-item h3 {
@@ -842,8 +846,10 @@
         /* Education section styling */
         .education-item {
             padding: 30px;
-            background: var(--gradient-surface);
+            background: transparent;
+            backdrop-filter: blur(2px);
             border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
             margin-bottom: 20px;
         }
         
@@ -897,10 +903,11 @@
         }
         
         .timeline-content {
-            background: var(--gradient-surface);
+            background: transparent;
+            backdrop-filter: blur(2px);
             border-radius: 16px;
             padding: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .timeline-header {
@@ -918,19 +925,21 @@
         }
         
         .project-card {
-            background: var(--gradient-surface);
+            background: transparent;
+            backdrop-filter: blur(2px);
             border-radius: 16px;
             padding: 2rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s ease;
         }
         
         .project-card:hover {
+            backdrop-filter: blur(4px);
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 100, 149, 0.5);
         }
         
         .project-tech {
@@ -972,17 +981,19 @@
         }
 
         .cert-card {
-            background: var(--gradient-surface);
+            background: transparent;
+            backdrop-filter: blur(2px);
             border-radius: 16px;
             padding: 2rem;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s ease;
         }
 
         .cert-card:hover {
+            backdrop-filter: blur(4px);
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 100, 149, 0.5);
         }
 
         .cert-card h3 {
@@ -1086,11 +1097,12 @@
             min-width: 280px;
             max-width: 40%;
             height: auto;
-            background: var(--gradient-surface);
+            background: transparent;
+            backdrop-filter: blur(2px);
             border-radius: 12px;
             padding: 0.75rem;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -1098,8 +1110,9 @@
         }
         
         .github-card:hover {
+            backdrop-filter: blur(4px);
             transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 100, 149, 0.5);
         }
         
         .github-card img {
@@ -1110,11 +1123,12 @@
         }
         
         .snake-container {
-            background: var(--gradient-surface);
+            background: transparent;
+            backdrop-filter: blur(2px);
             border-radius: 12px;
             padding: 1rem;
             margin-top: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             overflow: hidden;
         }
         
@@ -1127,8 +1141,8 @@
         /* Dark mode adjustments */
         body.dark-mode .github-card,
         body.dark-mode .snake-container {
-            background: var(--md-surface-container-low);
-            border-color: var(--md-surface-container-highest);
+            background: rgba(30, 32, 34, 0.05);
+            border-color: rgba(255, 255, 255, 0.02);
         }
         
         /* Responsive adjustments */
