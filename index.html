@@ -5,9 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aditya Sharma - Portfolio</title>
-    
+    <meta name="description" content="Aditya Sharma - Aspiring ML Engineer specializing in NLP, AI/ML solutions, and data engineering. Explore my portfolio showcasing projects in machine learning, data engineering, and cloud technologies.">
+    <meta name="keywords" content="Aditya Sharma, ML Engineer, NLP, AI, Machine Learning, Data Engineering, Portfolio, Azure, PySpark, Python">
+    <meta name="author" content="Aditya Sharma">
+    <meta property="og:title" content="Aditya Sharma - Portfolio">
+    <meta property="og:description" content="Aspiring ML Engineer focused on NLP and AI solutions">
+    <meta property="og:image" content="https://iamAdityaSharma.pro/dp.jpg">
+    <meta property="og:url" content="https://iamAdityaSharma.pro">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aditya Sharma - Portfolio">
+    <meta name="twitter:description" content="Aspiring ML Engineer focused on NLP and AI solutions">
+    <meta name="twitter:image" content="https://iamAdityaSharma.pro/dp.jpg">
     <link rel="canonical" href="https://iamAdityaSharma.pro" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9577733523183566"
@@ -19,9 +30,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="background.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Aditya Sharma",
+      "jobTitle": "Aspiring ML Engineer",
+      "description": "Machine Learning Engineer with expertise in AI/ML solutions and data engineering, focused on NLP.",
+      "url": "https://iamAdityaSharma.pro",
+      "image": "https://iamAdityaSharma.pro/dp.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/imadityasharma/",
+        "https://github.com/imAdityaSharma"
+      ],
+      "knowsAbout": ["Machine Learning", "NLP", "Data Engineering", "Python", "Azure", "PySpark"]
+    }
+    </script>
 </head>
 
 <body>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#intro" class="nav-logo" aria-label="Go to home section">Aditya Sharma</a>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu" role="menubar">
+                <!-- <li><a href="#header" class="nav-link" role="menuitem">Home</a></li> -->
+                <!-- <li><a href="#about" class="nav-link" role="menuitem">About</a></li> -->
+                <li><a href="#skills" class="nav-link" role="menuitem">About</a></li>
+                <li><a href="#experience" class="nav-link" role="menuitem">skills </a></li>
+                <li><a href="#projects" class="nav-link" role="menuitem">Experience</a></li>
+                <li><a href="#education" class="nav-link" role="menuitem">Projects</a></li>
+                <!-- <li><a href="#certifications" class="nav-link" role="menuitem">Certifications</a></li> -->
+                <li><a href="#github-stats" class="nav-link" role="menuitem">Education</a></li>
+                <li><a href="#contact" class="nav-link" role="menuitem">GitHub Stats</a></li>
+            </ul>
+        </div>
+    </nav>
     <canvas id="bg-canvas"></canvas>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">
          <i class="fas fa-moon"></i>
@@ -32,7 +80,7 @@
         <div class="intro-container">
             <div class="intro-content">
                 <div class="intro-profile">
-                    <img src="dp.jpg" alt="Aditya Sharma">
+                    <img src="dp.jpg" alt="Profile picture of Aditya Sharma, a machine learning engineer">
                 </div>
                 <h1>Aditya Sharma</h1>
                 <a href="#main-content" class="scroll-button">
@@ -52,17 +100,17 @@
             </div>
         </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Me</h2>
+        <section id="about" class="about" aria-labelledby="about-heading">
+             <div class="container">
+                 <h2 id="about-heading">About Me</h2>
                 <p>I'm a Machine Learning Engineer with expertise in AI/ML solutions and data engineering. Currently working on healthcare AI solutions and GenAI applications, with a strong background in cloud technologies and data processing.</p>
             </div>
         </section>
         
         <!-- Skills Section -->
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2>Technical Skills</h2>
+         <section id="skills" class="skills" aria-labelledby="skills-heading">
+             <div class="container">
+                 <h2 id="skills-heading">Technical Skills</h2>
                 <div class="skills-categories">
                     <div class="skill-category">
                         <h3>Programming & Scripting</h3>
@@ -219,9 +267,9 @@
         </section>
         
         <!-- Experience Section -->
-        <section id="experience" class="experience">
-            <div class="container">
-                <h2>Experience</h2>
+         <section id="experience" class="experience" aria-labelledby="experience-heading">
+             <div class="container">
+                 <h2 id="experience-heading">Experience</h2>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
@@ -289,9 +337,9 @@
         </section>
         
         <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>Featured Projects</h2>
+         <section id="projects" class="projects" aria-labelledby="projects-heading">
+             <div class="container">
+                 <h2 id="projects-heading">Featured Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-content">
@@ -304,8 +352,8 @@
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/imAdityaSharma/GST-Analytics" class="project-link" target="_blank" aria-label="View GST Analytics on GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link" aria-label="View live demo of GST Analytics"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
 
@@ -320,17 +368,17 @@
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/imAdityaSharma/Quora-Duplicate-Question-Detection" class="project-link" target="_blank" aria-label="View Quora Duplicate Question Detection on GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link" aria-label="View live demo of Quora Duplicate Question Detection"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="education" class="education">
+        <section id="education" class="education" aria-labelledby="education-heading">
             <div class="container">
-                <h2>Education</h2>
+                <h2 id="education-heading">Education</h2>
                 <div class="education-item">
                     <h3>B.Tech, Information Technology</h3>
                     <span class="date">2018-2022</span>
@@ -339,9 +387,32 @@
             </div>
         </section>
 
-        <section id="github-stats" class="github-stats">
+        <!-- <section id="certifications" class="certifications" aria-labelledby="certifications-heading">
             <div class="container">
-                <h2>GitHub Activity</h2>
+                <h2 id="certifications-heading">Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <h3>Azure Data Engineer Associate</h3>
+                        <p>Microsoft</p>
+                        <span class="date">2023</span>
+                    </div>
+                    <div class="cert-card">
+                        <h3>Certified Kubernetes Administrator</h3>
+                        <p>Cloud Native Computing Foundation</p>
+                        <span class="date">2024</span>
+                    </div>
+                    <div class="cert-card">
+                        <h3>AWS Certified Machine Learning - Specialty</h3>
+                        <p>Amazon Web Services</p>
+                        <span class="date">2024</span>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="github-stats" class="github-stats" aria-labelledby="github-heading">
+            <div class="container">
+                <h2 id="github-heading">GitHub Activity</h2>
                 <div class="stats-grid">
                     <!-- GitHub Stats Card -->
                     <div class="github-card main-stats">
@@ -364,16 +435,16 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="contact" class="contact" aria-labelledby="contact-heading">
             <div class="container">
-              <h2>Contact</h2>
-              <p>Reach out to me</p><br>
-              <a href="mailto:adityambha@outlook.com" class="contact-button">Outlook</a>
-              <a href="https://www.linkedin.com/in/imadityasharma/"  class="contact-button" target="_blank">LinkedIn</a>
-              <a href="https://github.com/imAdityaSharma"  class="contact-button" target="_blank">GitHub</a>
-              <a href="assets/CV_ADITYA_SHARMA.pdf" class="contact-button" download="Resume_Aditya_Sharma.pdf">
-                My Resume
-              </a>
+              <h2 id="contact-heading">Contact</h2>
+              <p>Connect with me</p>
+              <div class="social-links">
+                <a href="mailto:adityambha@outlook.com" class="contact-button" aria-label="Send email">Email</a>
+                <a href="https://www.linkedin.com/in/imadityasharma/" class="contact-button" target="_blank" aria-label="Visit LinkedIn profile">LinkedIn</a>
+                <a href="https://github.com/imAdityaSharma" class="contact-button" target="_blank" aria-label="Visit GitHub profile">GitHub</a>
+                <a href="assets/CV_ADITYA_SHARMA.pdf" class="contact-button" download="Resume_Aditya_Sharma.pdf" aria-label="Download resume">My Resume</a>
+              </div>
             </div>
           </section>
           

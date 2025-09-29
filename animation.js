@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollButton = document.querySelector(".scroll-button");
   const introSection = document.querySelector(".intro");
   const mainContent = document.querySelector(".main-content");
+  const mainNav = document.querySelector(".main-nav");
 
   // Handle click on scroll button
   scrollButton.addEventListener("click", (e) => {
@@ -16,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Show main content
     mainContent.classList.add("visible");
+
+    // Show navigation
+    mainNav.classList.add("visible");
 
     // Enable scrolling
     document.body.style.overflow = "auto";
@@ -89,11 +93,59 @@ function toggleDarkMode() {
   }
 }
 
-// Add smooth scroll for all internal links
+// Navigation functionality
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section');
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+// Active section highlighting
+const observerOptions = {
+  threshold: 0.5,
+  rootMargin: '-50% 0px -50% 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${id}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+}, observerOptions);
+
+sections.forEach(section => observer.observe(section));
+
+// Hamburger menu toggle
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', navMenu.classList.contains('open'));
+});
+
+// Close mobile menu when clicking a link
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// Enhanced smooth scroll with offset for fixed nav
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
+    const targetId = this.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+    const navHeight = document.querySelector('.main-nav').offsetHeight;
+    const targetPosition = targetElement.offsetTop - navHeight - 20; // 20px extra padding
+
+    window.scrollTo({
+      top: targetPosition,
       behavior: "smooth",
     });
   });
@@ -149,7 +201,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Add parallax effect to sections
+// Contact form handler
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  // Placeholder: In a real implementation, send data to server
+  alert('Thank you for your message! I will get back to you soon.');
+  e.target.reset();
+});
+
+// Loading states for GitHub stats
+document.addEventListener('DOMContentLoaded', () => {
+  const githubImages = document.querySelectorAll('.github-card img');
+  githubImages.forEach(img => {
+    img.addEventListener('load', () => {
+      img.classList.add('loaded');
+    });
+    // If already loaded
+    if (img.complete) {
+      img.classList.add('loaded');
+    }
+  });
+});
+
+// Add parallax effect to sections (optimized)
 window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");
   sections.forEach((section) => {
