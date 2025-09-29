@@ -1077,6 +1077,7 @@
         /* GitHub Stats Section */
         .github-stats {
             padding: 2rem 0;
+            backdrop-filter: blur(4px);
         }
         
         .stats-grid {
